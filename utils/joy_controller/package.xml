@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>joy_controller</name>
+  <version>0.0.0</version>
+  <description>Receiving joystick input and publishing a twist message</description>
+  <maintainer email="dandelion1124@gmail.com">Yasuhiro Yoshimura</maintainer>
+  <license>MIT</license>
+  <author email="mizuhoaoki1998@gmail.com">Mizuho Aoki</author>
+  <author email="shimo@ucl.nuee.nagoya-u.ac.jp">Hironori Shimosato</author>
+  <author email="dandelion1124@gmail.com">Yasuhiro Yoshimura</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

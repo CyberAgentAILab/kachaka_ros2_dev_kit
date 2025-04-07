@@ -1,0 +1,25 @@
+joy_controller_node:
+  ros__parameters:
+    # subscribing topic name
+    sub_topic: 
+      joy: "/operation/joy_linux/joy"
+      autonomouse_cmd_vel: "/cmd_vel"
+
+    # publishing topic name
+    pub_topic: 
+      cmd_vel: "/kachaka/manual_control/cmd_vel"
+
+    # joy button/axis indices
+    joy_top_left_button_idx: 4  # press this button to slow down
+    joy_top_right_button_idx: 5 # press this button to enable operation
+    joy_left_stick_x_idx: 0
+    joy_left_stick_y_idx: 1
+    joy_right_stick_x_idx: 3
+    joy_right_stick_y_idx: 4
+
+    # max speed settings
+    abs_max_linear_speed: 0.5 # m/s
+    abs_max_angular_speed: 0.75 # rad/s
+
+    # joystick device
+    input_joy_device: "/dev/input/js0"
