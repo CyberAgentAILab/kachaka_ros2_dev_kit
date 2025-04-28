@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <sdf version="1.9">
   <world name="sample_world">
     <physics name='1ms' type='ignored'>
