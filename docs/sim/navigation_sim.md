@@ -31,7 +31,8 @@ ros2 launch kachaka_nav2_bringup localization_launch.py use_sim_time:=true map:=
 ros2 launch kachaka_nav2_bringup localization_launch.py use_sim_time:=true map:=$HOME/dev_ws/src/kachaka_ros2_dev_kit/kachaka_nav2_bringup/maps/depot.yaml
 ```
 
-その後、RViz2の「2D Pose Estimate」を押し、ロボットの初期位置姿勢を指定します。
+> [!NOTE]
+> 初期位置姿勢は自動で与えられる設定になっています。手動で与えたい場合は、[kachaka_nav2_bringup/params/localization_param.yaml](../../kachaka_nav2_bringup/params/localization_param.yaml)でamclのパラメータにて`set_initial_pose: true`となっている箇所を`set_initial_pose: false`としてください。その後、自己位置推定起動して、RViz2の「2D Pose Estimate」を押し、ロボットの初期位置姿勢を指定します。
 
 ![](../images/2d_pose_estimate.png)
 

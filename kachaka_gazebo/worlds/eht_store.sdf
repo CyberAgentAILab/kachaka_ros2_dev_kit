@@ -11,6 +11,7 @@
     <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
+    <plugin name='gz::sim::systems::Imu' filename='gz-sim-imu-system'/>
 
     <light type="directional" name="sun">
       <cast_shadows>0</cast_shadows>
