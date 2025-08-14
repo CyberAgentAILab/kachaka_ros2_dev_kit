@@ -11,7 +11,7 @@
     <link name="base_link">
       <inertial>
         <mass value="10.0" />
-        <origin xyz="0.0435 0.0 0.0475"
+        <origin xyz="0.0435 0.0 0.045"
                 rpy="0 0 0" />
         <inertia ixx="${1/12*10*(0.095**2+0.240**2)}" ixy="0" ixz="0"
                 iyy="${1/12*10*(0.095**2+0.387**2)}" iyz="0"
@@ -25,7 +25,7 @@
         <material name="body" />
       </visual>
       <collision>
-        <origin xyz="0.0435 0.0 0.0475"
+        <origin xyz="0.0435 0.0 0.045"
                 rpy="0 0 0" />
         <geometry>
           <box size="0.387 0.240 0.095" />
@@ -40,7 +40,7 @@
       <parent link="base_link" />
       <child link="base_r_drive_wheel_link" />
       <origin rpy="-1.57 0 0"
-              xyz="0.0 -0.100 0.045" />
+              xyz="0.0 -0.100 0.04" />
       <axis xyz="0 0 1" />
     </joint>
     <link name="base_r_drive_wheel_link">
@@ -66,7 +66,7 @@
                 rpy="0 0 0" />
         <geometry>
           <cylinder length="0.025"
-                    radius="0.0475" />
+                    radius="0.045" />
         </geometry>
         <material name="tire" />
         <surface>
@@ -99,7 +99,7 @@
       <parent link="base_link" />
       <child link="base_l_drive_wheel_link" />
       <origin rpy="-1.57 0 0"
-              xyz="0.0 0.100 0.045" />
+              xyz="0.0 0.100 0.04" />
       <axis xyz="0 0 1" />
     </joint>
     <link name="base_l_drive_wheel_link">
@@ -126,7 +126,7 @@
                 rpy="0 0 0" />
         <geometry>
           <cylinder length="0.025"
-                    radius="0.0475" />
+                    radius="0.045" />
         </geometry>
         <material name="tire" />
         <surface>
@@ -160,7 +160,7 @@
           <left_joint>base_l_drive_wheel_joint</left_joint>
           <right_joint>base_r_drive_wheel_joint</right_joint>
           <wheel_separation>0.2</wheel_separation>
-          <wheel_radius>0.0475</wheel_radius>
+          <wheel_radius>0.045</wheel_radius>
           <max_linear_acceleration>2</max_linear_acceleration>
           <min_linear_acceleration>-2</min_linear_acceleration>
           <max_angular_acceleration>3</max_angular_acceleration>
@@ -192,7 +192,7 @@
       <child link="laser_frame" />
       <!-- Changed the height of 2D LiDAR to avoid the problem of Gazebo -->
       <origin rpy="0 0 ${PI / 2.0}"
-              xyz="0.156 0 0.1549" />
+              xyz="0.156 0 0.1049" />
     </joint>
     <link name="laser_frame" />
     <gazebo reference="laser_frame">
@@ -392,25 +392,25 @@
     <joint name="caster1_joint" type="fixed">
       <parent link="base_link"/>
       <child link="caster1_link"/>
-      <origin xyz="0.19 0.075 0.01" rpy="0 0 0"/>
+      <origin xyz="0.19 0.075 0.0" rpy="0 0 0"/>
     </joint>
     <link name="caster1_link">
       <visual>
         <geometry>
-          <sphere radius="0.01"/>
+          <sphere radius="0.005"/>
         </geometry>
         <material name="tire" />
       </visual>
       <collision>
         <geometry>
-          <sphere radius="0.01"/>
+          <sphere radius="0.005"/>
         </geometry>
       </collision>
       <inertial>
-        <mass value="0.01" />
-        <inertia ixx="${(2/5) * 0.01 * 0.01 * 0.01}" ixy="0.0" ixz="0.0"
-                 iyy="${(2/5) * 0.01 * 0.01 * 0.01}" iyz="0.0"
-                 izz="${(2/5) * 0.01 * 0.01 * 0.01}" />
+        <mass value="0.005" />
+        <inertia ixx="${(2/5) * 0.005 * 0.005 * 0.005}" ixy="0.0" ixz="0.0"
+                 iyy="${(2/5) * 0.005 * 0.005 * 0.005}" iyz="0.0"
+                 izz="${(2/5) * 0.005 * 0.005 * 0.005}" />
       </inertial>
     </link>
 
@@ -429,25 +429,25 @@
     <joint name="caster2_joint" type="fixed">
       <parent link="base_link"/>
       <child link="caster2_link"/>
-      <origin xyz="0.19 -0.075 0.01" rpy="0 0 0"/>
+      <origin xyz="0.19 -0.075 0.0" rpy="0 0 0"/>
     </joint>
     <link name="caster2_link">
       <visual>
         <geometry>
-          <sphere radius="0.01"/>
+          <sphere radius="0.005"/>
         </geometry>
         <material name="tire" />
       </visual>
       <collision>
         <geometry>
-          <sphere radius="0.01"/>
+          <sphere radius="0.005"/>
         </geometry>
       </collision>
       <inertial>
-        <mass value="0.01" />
-        <inertia ixx="${(2/5) * 0.01 * 0.01 * 0.01}" ixy="0.0" ixz="0.0"
-                 iyy="${(2/5) * 0.01 * 0.01 * 0.01}" iyz="0.0"
-                 izz="${(2/5) * 0.01 * 0.01 * 0.01}" />
+        <mass value="0.005" />
+        <inertia ixx="${(2/5) * 0.005 * 0.005 * 0.005}" ixy="0.0" ixz="0.0"
+                 iyy="${(2/5) * 0.005 * 0.005 * 0.005}" iyz="0.0"
+                 izz="${(2/5) * 0.005 * 0.005 * 0.005}" />
       </inertial>
     </link>
 
