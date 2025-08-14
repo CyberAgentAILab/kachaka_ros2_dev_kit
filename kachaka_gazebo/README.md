@@ -96,15 +96,6 @@ ros2 launch kachaka_gazebo simulation.launch.py world:=$HOME/dev_ws/src/kachaka_
 - カチャカROS 2ブリッジはフュージョンされたオドメトリをもとにbase_link、odom間のtfを発行します
 - `kachaka_gazebo`パッケージが提供するGazebo環境は、ホイールオドメトリをもとにbase_link、odom間のtfを発行します
 
-### 2D LiDAR設置高さ
-
-<https://github.com/gazebosim/gz-sensors/issues/509>の問題を回避するため、[kachaka_description/urdf/_kachaka.urdf.xacro](../kachaka_description/urdf/_kachaka.urdf.xacro)に対して以下の変更を行っています。
-
-```diff
--              xyz="0.156 0 0.1049" />
-+              xyz="0.156 0 0.1549" />
-```
-
 ### ToFカメラの設置位置
 
 Gazebo Ignitionにおけるdepthカメラの問題を回避するため、[kachaka_description/urdf/_kachaka.urdf.xacro](../kachaka_description/urdf/_kachaka.urdf.xacro)に対して以下の変更を行っています。
